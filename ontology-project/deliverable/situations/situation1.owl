@@ -1,0 +1,68 @@
+Prefix(:=<http://www.semanticweb.org/situation1#>)
+Prefix(owl:=<http://www.w3.org/2002/07/owl#>)
+Prefix(rdf:=<http://www.w3.org/1999/02/22-rdf-syntax-ns#>)
+Prefix(xml:=<http://www.w3.org/XML/1998/namespace>)
+Prefix(xsd:=<http://www.w3.org/2001/XMLSchema#>)
+Prefix(rdfs:=<http://www.w3.org/2000/01/rdf-schema#>)
+
+
+Ontology(<http://www.semanticweb.org/situation1>
+
+Declaration(Class(:Object))
+Declaration(Class(:Place))
+Declaration(Class(:SymbolEntity))
+Declaration(Class(:SymbolRelation))
+Declaration(ObjectProperty(:hasSymbol))
+Declaration(ObjectProperty(:isFoundIn))
+Declaration(ObjectProperty(:isInspiredIn))
+Declaration(NamedIndividual(:Camino_de_Santiago))
+Declaration(NamedIndividual(:Galicia))
+Declaration(NamedIndividual(:Scallop_Shell))
+Declaration(NamedIndividual(:SymbolRelation1))
+############################
+#   Object Properties
+############################
+
+# Object Property: :hasSymbol (:hasSymbol)
+
+ObjectPropertyDomain(:hasSymbol :SymbolEntity)
+ObjectPropertyRange(:hasSymbol :SymbolRelation)
+
+# Object Property: :isFoundIn (:isFoundIn)
+
+ObjectPropertyDomain(:isFoundIn :SymbolRelation)
+ObjectPropertyRange(:isFoundIn :Place)
+
+# Object Property: :isInspiredIn (:isInspiredIn)
+
+SubObjectPropertyOf(:isInspiredIn owl:topObjectProperty)
+ObjectPropertyDomain(:isInspiredIn :SymbolRelation)
+ObjectPropertyRange(:isInspiredIn :Object)
+
+
+
+############################
+#   Named Individuals
+############################
+
+# Individual: :Camino_de_Santiago (:Camino_de_Santiago)
+
+ClassAssertion(:SymbolEntity :Camino_de_Santiago)
+ObjectPropertyAssertion(:hasSymbol :Camino_de_Santiago :SymbolRelation1)
+
+# Individual: :Galicia (:Galicia)
+
+ClassAssertion(:Place :Galicia)
+
+# Individual: :Scallop_Shell (:Scallop_Shell)
+
+ClassAssertion(:Object :Scallop_Shell)
+
+# Individual: :SymbolRelation1 (:SymbolRelation1)
+
+ClassAssertion(:SymbolRelation :SymbolRelation1)
+ObjectPropertyAssertion(:hasSymbol :SymbolRelation1 :Scallop_Shell)
+ObjectPropertyAssertion(:isFoundIn :SymbolRelation1 :Galicia)
+
+
+)
