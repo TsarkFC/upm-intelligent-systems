@@ -1,0 +1,174 @@
+@prefix : <http://modellingdh.github.io/ont/odp/pgc/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@base <http://modellingdh.github.io/ont/odp/pgc/> .
+
+<http://modellingdh.github.io/ont/odp/pgc/> rdf:type owl:Ontology .
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  http://modellingdh.github.io/ont/odp/pgc/accessThrough
+:accessThrough rdf:type owl:ObjectProperty ;
+               rdfs:domain :Collection ,
+                           :Document ;
+               rdfs:range :Medium .
+
+
+###  http://modellingdh.github.io/ont/odp/pgc/affiliationTo
+:affiliationTo rdf:type owl:ObjectProperty ;
+               rdfs:subPropertyOf :evidenceProperty ;
+               rdfs:domain :Affiliation ;
+               rdfs:range :Community ,
+                          :Group .
+
+
+###  http://modellingdh.github.io/ont/odp/pgc/engagingIn
+:engagingIn rdf:type owl:ObjectProperty ;
+            rdfs:domain :Engagement ;
+            rdfs:range :Activity ,
+                       :Event .
+
+
+###  http://modellingdh.github.io/ont/odp/pgc/evidence
+:evidence rdf:type owl:ObjectProperty .
+
+
+###  http://modellingdh.github.io/ont/odp/pgc/evidenceProperty
+:evidenceProperty rdf:type owl:ObjectProperty ;
+                  rdfs:subPropertyOf :evidence .
+
+
+###  http://modellingdh.github.io/ont/odp/pgc/evidencePrototype
+:evidencePrototype rdf:type owl:ObjectProperty ;
+                   rdfs:subPropertyOf :evidence .
+
+
+###  http://modellingdh.github.io/ont/odp/pgc/partOf
+:partOf rdf:type owl:ObjectProperty ;
+        rdfs:domain :Document ;
+        rdfs:range :Collection .
+
+
+###  http://modellingdh.github.io/ont/odp/pgc/proxy
+:proxy rdf:type owl:ObjectProperty .
+
+
+###  http://modellingdh.github.io/ont/odp/pgc/proxyProperty
+:proxyProperty rdf:type owl:ObjectProperty ;
+               rdfs:subPropertyOf :proxy ;
+               rdfs:domain :Property ;
+               rdfs:range :Prototype .
+
+
+###  http://modellingdh.github.io/ont/odp/pgc/proxyPrototype
+:proxyPrototype rdf:type owl:ObjectProperty ;
+                rdfs:subPropertyOf :proxy ;
+                rdfs:domain :Prototype ;
+                rdfs:range :Prototype .
+
+
+###  http://modellingdh.github.io/ont/odp/pgc/sourcedFrom
+:sourcedFrom rdf:type owl:ObjectProperty ;
+             rdfs:domain :Property ;
+             rdfs:range :Source .
+
+
+#################################################################
+#    Data properties
+#################################################################
+
+###  http://www.semanticweb.org/apa224/ontologies/2021/2/untitled-ontology-74#engagementType
+<http://www.semanticweb.org/apa224/ontologies/2021/2/untitled-ontology-74#engagementType> rdf:type owl:DatatypeProperty ;
+                                                                                          rdfs:domain :Engagement ;
+                                                                                          rdfs:range [ rdf:type rdfs:Datatype ;
+                                                                                                       owl:oneOf [ rdf:type rdf:List ;
+                                                                                                                   rdf:first "direct" ;
+                                                                                                                   rdf:rest [ rdf:type rdf:List ;
+                                                                                                                              rdf:first "indirect" ;
+                                                                                                                              rdf:rest rdf:nil
+                                                                                                                            ]
+                                                                                                                 ]
+                                                                                                     ] .
+
+
+###  http://www.semanticweb.org/apa224/ontologies/2021/2/untitled-ontology-74#range
+<http://www.semanticweb.org/apa224/ontologies/2021/2/untitled-ontology-74#range> rdf:type owl:DatatypeProperty ;
+                                                                                 rdfs:subPropertyOf owl:topDataProperty ;
+                                                                                 rdfs:domain :Property .
+
+
+###  http://www.semanticweb.org/apa224/ontologies/2021/2/untitled-ontology-74#type
+<http://www.semanticweb.org/apa224/ontologies/2021/2/untitled-ontology-74#type> rdf:type owl:DatatypeProperty ;
+                                                                                rdfs:domain :Property .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://modellingdh.github.io/ont/odp/pgc/Activity
+:Activity rdf:type owl:Class .
+
+
+###  http://modellingdh.github.io/ont/odp/pgc/Affiliation
+:Affiliation rdf:type owl:Class ;
+             rdfs:subClassOf :Engagement .
+
+
+###  http://modellingdh.github.io/ont/odp/pgc/Collection
+:Collection rdf:type owl:Class ;
+            rdfs:subClassOf :Source .
+
+
+###  http://modellingdh.github.io/ont/odp/pgc/Community
+:Community rdf:type owl:Class ;
+           rdfs:subClassOf :Prototype .
+
+
+###  http://modellingdh.github.io/ont/odp/pgc/Document
+:Document rdf:type owl:Class ;
+          rdfs:subClassOf :Source .
+
+
+###  http://modellingdh.github.io/ont/odp/pgc/Engagement
+:Engagement rdf:type owl:Class ;
+            rdfs:subClassOf :Property .
+
+
+###  http://modellingdh.github.io/ont/odp/pgc/Event
+:Event rdf:type owl:Class .
+
+
+###  http://modellingdh.github.io/ont/odp/pgc/Group
+:Group rdf:type owl:Class ;
+       rdfs:subClassOf :Prototype .
+
+
+###  http://modellingdh.github.io/ont/odp/pgc/Medium
+:Medium rdf:type owl:Class ;
+        rdfs:subClassOf :Source .
+
+
+###  http://modellingdh.github.io/ont/odp/pgc/Profile
+:Profile rdf:type owl:Class ;
+         rdfs:subClassOf :Prototype .
+
+
+###  http://modellingdh.github.io/ont/odp/pgc/Property
+:Property rdf:type owl:Class .
+
+
+###  http://modellingdh.github.io/ont/odp/pgc/Prototype
+:Prototype rdf:type owl:Class .
+
+
+###  http://modellingdh.github.io/ont/odp/pgc/Source
+:Source rdf:type owl:Class .
+
+
+###  Generated by the OWL API (version 4.2.8.20170104-2310) https://github.com/owlcs/owlapi
