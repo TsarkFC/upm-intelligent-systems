@@ -1,0 +1,370 @@
+Prefix(:=<http://www.semanticweb.org/camino-santiago>)
+Prefix(owl:=<http://www.w3.org/2002/07/owl#>)
+Prefix(rdf:=<http://www.w3.org/1999/02/22-rdf-syntax-ns#>)
+Prefix(xml:=<http://www.w3.org/XML/1998/namespace>)
+Prefix(xsd:=<http://www.w3.org/2001/XMLSchema#>)
+Prefix(rdfs:=<http://www.w3.org/2000/01/rdf-schema#>)
+
+
+Ontology(<http://www.semanticweb.org/camino-santiago>
+
+Declaration(Class(<http://www.cidoc-crm.org/cidoc-crm/E18_Physical_Thing>))
+Declaration(Class(<http://www.cidoc-crm.org/cidoc-crm/E19_Physical_Object>))
+Declaration(Class(<http://www.cidoc-crm.org/cidoc-crm/E1_CRM_Entity>))
+Declaration(Class(<http://www.cidoc-crm.org/cidoc-crm/E20_Biological_Object>))
+Declaration(Class(<http://www.cidoc-crm.org/cidoc-crm/E21_Person>))
+Declaration(Class(<http://www.cidoc-crm.org/cidoc-crm/E22_Human-Made_Object>))
+Declaration(Class(<http://www.cidoc-crm.org/cidoc-crm/E24_Physical_Human-Made_Thing>))
+Declaration(Class(<http://www.cidoc-crm.org/cidoc-crm/E26_Physical_Feature>))
+Declaration(Class(<http://www.cidoc-crm.org/cidoc-crm/E27_Site>))
+Declaration(Class(<http://www.cidoc-crm.org/cidoc-crm/E2_Temporal_Entity>))
+Declaration(Class(<http://www.cidoc-crm.org/cidoc-crm/E31_Document>))
+Declaration(Class(<http://www.cidoc-crm.org/cidoc-crm/E39_Actor>))
+Declaration(Class(<http://www.cidoc-crm.org/cidoc-crm/E4_Period>))
+Declaration(Class(<http://www.cidoc-crm.org/cidoc-crm/E52_Time-Span>))
+Declaration(Class(<http://www.cidoc-crm.org/cidoc-crm/E53_Place>))
+Declaration(Class(<http://www.cidoc-crm.org/cidoc-crm/E5_Event>))
+Declaration(Class(<http://www.cidoc-crm.org/cidoc-crm/E72_Legal_Object>))
+Declaration(Class(<http://www.cidoc-crm.org/cidoc-crm/E73_Information_Object>))
+Declaration(Class(<http://www.cidoc-crm.org/cidoc-crm/E7_Activity>))
+Declaration(Class(<http://www.semanticweb.org/camino-santiago#Accommodation>))
+Declaration(Class(<http://www.semanticweb.org/camino-santiago#Compostela>))
+Declaration(Class(<http://www.semanticweb.org/camino-santiago#Credencial>))
+Declaration(Class(<http://www.semanticweb.org/camino-santiago#Location>))
+Declaration(Class(<http://www.semanticweb.org/camino-santiago#Monument>))
+Declaration(Class(<http://www.semanticweb.org/camino-santiago#Passing>))
+Declaration(Class(<http://www.semanticweb.org/camino-santiago#Piligrim>))
+Declaration(Class(<http://www.semanticweb.org/camino-santiago#Route>))
+Declaration(Class(<http://www.semanticweb.org/camino-santiago#Stamp>))
+Declaration(Class(<http://www.semanticweb.org/camino-santiago#Tourist>))
+Declaration(Class(<http://www.semanticweb.org/camino-santiago#Trip>))
+Declaration(ObjectProperty(<http://www.cidoc-crm.org/cidoc-crm/P105i_has_right_on>))
+Declaration(ObjectProperty(<http://www.cidoc-crm.org/cidoc-crm/P10_falls_within>))
+Declaration(ObjectProperty(<http://www.cidoc-crm.org/cidoc-crm/P11i_participated_in>))
+Declaration(ObjectProperty(<http://www.cidoc-crm.org/cidoc-crm/P14_carried_out_by>))
+Declaration(ObjectProperty(<http://www.cidoc-crm.org/cidoc-crm/P14i_performed>))
+Declaration(ObjectProperty(<http://www.cidoc-crm.org/cidoc-crm/P161_has_spatial_projection>))
+Declaration(ObjectProperty(<http://www.cidoc-crm.org/cidoc-crm/P4_has_time-span>))
+Declaration(ObjectProperty(<http://www.cidoc-crm.org/cidoc-crm/P4i_is_time-span_of>))
+Declaration(ObjectProperty(<http://www.cidoc-crm.org/cidoc-crm/P51i_is_former_or_current_owner_of>))
+Declaration(ObjectProperty(<http://www.cidoc-crm.org/cidoc-crm/P52_has_current_owner>))
+Declaration(ObjectProperty(<http://www.cidoc-crm.org/cidoc-crm/P52i_is_current_owner_of>))
+Declaration(ObjectProperty(<http://www.cidoc-crm.org/cidoc-crm/P53_has_former_or_current_location>))
+Declaration(ObjectProperty(<http://www.cidoc-crm.org/cidoc-crm/P55_has_current_location>))
+Declaration(ObjectProperty(<http://www.cidoc-crm.org/cidoc-crm/P55i_currently_holds>))
+Declaration(ObjectProperty(<http://www.cidoc-crm.org/cidoc-crm/P7_took_place_at>))
+Declaration(ObjectProperty(<http://www.cidoc-crm.org/cidoc-crm/P7i_witnessed>))
+Declaration(ObjectProperty(<http://www.cidoc-crm.org/cidoc-crm/P9_consists_of>))
+Declaration(ObjectProperty(<http://www.cidoc-crm.org/cidoc-crm/P9i_forms_part_of>))
+Declaration(ObjectProperty(<http://www.semanticweb.org/camino-santiago#ends_at>))
+Declaration(ObjectProperty(<http://www.semanticweb.org/camino-santiago#has_stamp>))
+Declaration(ObjectProperty(<http://www.semanticweb.org/camino-santiago#is_located_at>))
+Declaration(ObjectProperty(<http://www.semanticweb.org/camino-santiago#is_part_of>))
+Declaration(ObjectProperty(<http://www.semanticweb.org/camino-santiago#is_related_to>))
+Declaration(ObjectProperty(<http://www.semanticweb.org/camino-santiago#starts_at>))
+Declaration(ObjectProperty(<http://www.semanticweb.org/camino-santiago#visited>))
+
+############################
+#   Object Properties
+############################
+
+# Object Property: <http://www.cidoc-crm.org/cidoc-crm/P14_carried_out_by> (<http://www.cidoc-crm.org/cidoc-crm/P14_carried_out_by>)
+
+InverseObjectProperties(<http://www.cidoc-crm.org/cidoc-crm/P14_carried_out_by> <http://www.cidoc-crm.org/cidoc-crm/P14i_performed>)
+
+# Object Property: <http://www.cidoc-crm.org/cidoc-crm/P14i_performed> (выполнял)
+
+AnnotationAssertion(rdfs:label <http://www.cidoc-crm.org/cidoc-crm/P14i_performed> "a exécuté"@fr)
+AnnotationAssertion(rdfs:label <http://www.cidoc-crm.org/cidoc-crm/P14i_performed> "executou"@pt)
+AnnotationAssertion(rdfs:label <http://www.cidoc-crm.org/cidoc-crm/P14i_performed> "führte aus"@de)
+AnnotationAssertion(rdfs:label <http://www.cidoc-crm.org/cidoc-crm/P14i_performed> "performed"@en)
+AnnotationAssertion(rdfs:label <http://www.cidoc-crm.org/cidoc-crm/P14i_performed> "πραγματοποίησε"@el)
+AnnotationAssertion(rdfs:label <http://www.cidoc-crm.org/cidoc-crm/P14i_performed> "выполнял"@ru)
+AnnotationAssertion(rdfs:label <http://www.cidoc-crm.org/cidoc-crm/P14i_performed> "执行"@zh)
+SubObjectPropertyOf(<http://www.cidoc-crm.org/cidoc-crm/P14i_performed> <http://www.cidoc-crm.org/cidoc-crm/P11i_participated_in>)
+ObjectPropertyDomain(<http://www.cidoc-crm.org/cidoc-crm/P14i_performed> <http://www.cidoc-crm.org/cidoc-crm/E39_Actor>)
+ObjectPropertyRange(<http://www.cidoc-crm.org/cidoc-crm/P14i_performed> <http://www.cidoc-crm.org/cidoc-crm/E7_Activity>)
+
+# Object Property: <http://www.cidoc-crm.org/cidoc-crm/P4_has_time-span> (a pour durée)
+
+AnnotationAssertion(rdfs:comment <http://www.cidoc-crm.org/cidoc-crm/P4_has_time-span> "This property associates an instance of E2 Temporal Entity with the instance of E52 Time-Span during which it was on-going. The associated instance of E52 Time-Span is understood as the real time-span during which the phenomena making up the temporal entity instance were active. More than one instance of E2 Temporal Entity may share a common instance of E52 Time-Span only if they come into being and end being due to identical declarations or events."@en)
+AnnotationAssertion(rdfs:label <http://www.cidoc-crm.org/cidoc-crm/P4_has_time-span> "a pour durée"@fr)
+AnnotationAssertion(rdfs:label <http://www.cidoc-crm.org/cidoc-crm/P4_has_time-span> "has time-span"@en)
+AnnotationAssertion(rdfs:label <http://www.cidoc-crm.org/cidoc-crm/P4_has_time-span> "hat Zeitspanne"@de)
+AnnotationAssertion(rdfs:label <http://www.cidoc-crm.org/cidoc-crm/P4_has_time-span> "tem período de tempo"@pt)
+AnnotationAssertion(rdfs:label <http://www.cidoc-crm.org/cidoc-crm/P4_has_time-span> "βρισκόταν σε εξέλιξη"@el)
+AnnotationAssertion(rdfs:label <http://www.cidoc-crm.org/cidoc-crm/P4_has_time-span> "имеет временной отрезок"@ru)
+AnnotationAssertion(rdfs:label <http://www.cidoc-crm.org/cidoc-crm/P4_has_time-span> "发生时段是"@zh)
+InverseObjectProperties(<http://www.cidoc-crm.org/cidoc-crm/P4_has_time-span> <http://www.cidoc-crm.org/cidoc-crm/P4i_is_time-span_of>)
+ObjectPropertyDomain(<http://www.cidoc-crm.org/cidoc-crm/P4_has_time-span> <http://www.cidoc-crm.org/cidoc-crm/E2_Temporal_Entity>)
+ObjectPropertyRange(<http://www.cidoc-crm.org/cidoc-crm/P4_has_time-span> <http://www.cidoc-crm.org/cidoc-crm/E52_Time-Span>)
+
+# Object Property: <http://www.cidoc-crm.org/cidoc-crm/P52_has_current_owner> (<http://www.cidoc-crm.org/cidoc-crm/P52_has_current_owner>)
+
+InverseObjectProperties(<http://www.cidoc-crm.org/cidoc-crm/P52_has_current_owner> <http://www.cidoc-crm.org/cidoc-crm/P52i_is_current_owner_of>)
+
+# Object Property: <http://www.cidoc-crm.org/cidoc-crm/P52i_is_current_owner_of> (is current owner of)
+
+AnnotationAssertion(rdfs:label <http://www.cidoc-crm.org/cidoc-crm/P52i_is_current_owner_of> "est le propriétaire actuel de"@fr)
+AnnotationAssertion(rdfs:label <http://www.cidoc-crm.org/cidoc-crm/P52i_is_current_owner_of> "is current owner of"@en)
+AnnotationAssertion(rdfs:label <http://www.cidoc-crm.org/cidoc-crm/P52i_is_current_owner_of> "ist derzeitiger Besitzer von"@de)
+AnnotationAssertion(rdfs:label <http://www.cidoc-crm.org/cidoc-crm/P52i_is_current_owner_of> "é proprietário de"@pt)
+AnnotationAssertion(rdfs:label <http://www.cidoc-crm.org/cidoc-crm/P52i_is_current_owner_of> "είναι ιδιοκτήτης του"@el)
+AnnotationAssertion(rdfs:label <http://www.cidoc-crm.org/cidoc-crm/P52i_is_current_owner_of> "является текущим владельцем для"@ru)
+AnnotationAssertion(rdfs:label <http://www.cidoc-crm.org/cidoc-crm/P52i_is_current_owner_of> "是当前所有者"@zh)
+SubObjectPropertyOf(<http://www.cidoc-crm.org/cidoc-crm/P52i_is_current_owner_of> <http://www.cidoc-crm.org/cidoc-crm/P105i_has_right_on>)
+SubObjectPropertyOf(<http://www.cidoc-crm.org/cidoc-crm/P52i_is_current_owner_of> <http://www.cidoc-crm.org/cidoc-crm/P51i_is_former_or_current_owner_of>)
+ObjectPropertyDomain(<http://www.cidoc-crm.org/cidoc-crm/P52i_is_current_owner_of> <http://www.cidoc-crm.org/cidoc-crm/E39_Actor>)
+ObjectPropertyRange(<http://www.cidoc-crm.org/cidoc-crm/P52i_is_current_owner_of> <http://www.cidoc-crm.org/cidoc-crm/E18_Physical_Thing>)
+
+# Object Property: <http://www.cidoc-crm.org/cidoc-crm/P55_has_current_location> (в данный момент находится в)
+
+AnnotationAssertion(rdfs:comment <http://www.cidoc-crm.org/cidoc-crm/P55_has_current_location> "This property records the location of an instance of E19 Physical Object at the time of validity of the record or database containing the statement that uses this property.
+This property is a specialisation of P53 has former or current location (is former or current location of). It indicates that the instance of E53 Place associated with the instance of E19 Physical Object is the current location of the object. The property does not allow any indication of how long the object has been at the current location.
+This property is a shortcut. A more detailed representation can make use of the fully developed (i.e., indirect) path from E19 Physical Object, through, P25i moved by, E9 Move, P26 moved to to E53 Place if and only if this Move is the most recent."@en)
+AnnotationAssertion(rdfs:label <http://www.cidoc-crm.org/cidoc-crm/P55_has_current_location> "a pour localisation actuelle"@fr)
+AnnotationAssertion(rdfs:label <http://www.cidoc-crm.org/cidoc-crm/P55_has_current_location> "has current location"@en)
+AnnotationAssertion(rdfs:label <http://www.cidoc-crm.org/cidoc-crm/P55_has_current_location> "hat derzeitigen Standort"@de)
+AnnotationAssertion(rdfs:label <http://www.cidoc-crm.org/cidoc-crm/P55_has_current_location> "é localizado em"@pt)
+AnnotationAssertion(rdfs:label <http://www.cidoc-crm.org/cidoc-crm/P55_has_current_location> "βρίσκεται σε"@el)
+AnnotationAssertion(rdfs:label <http://www.cidoc-crm.org/cidoc-crm/P55_has_current_location> "в данный момент находится в"@ru)
+AnnotationAssertion(rdfs:label <http://www.cidoc-crm.org/cidoc-crm/P55_has_current_location> "有当前位置"@zh)
+SubObjectPropertyOf(<http://www.cidoc-crm.org/cidoc-crm/P55_has_current_location> <http://www.cidoc-crm.org/cidoc-crm/P53_has_former_or_current_location>)
+InverseObjectProperties(<http://www.cidoc-crm.org/cidoc-crm/P55_has_current_location> <http://www.cidoc-crm.org/cidoc-crm/P55i_currently_holds>)
+ObjectPropertyDomain(<http://www.cidoc-crm.org/cidoc-crm/P55_has_current_location> <http://www.cidoc-crm.org/cidoc-crm/E19_Physical_Object>)
+ObjectPropertyRange(<http://www.cidoc-crm.org/cidoc-crm/P55_has_current_location> <http://www.cidoc-crm.org/cidoc-crm/E53_Place>)
+
+# Object Property: <http://www.cidoc-crm.org/cidoc-crm/P7_took_place_at> (fand statt in)
+
+AnnotationAssertion(rdfs:comment <http://www.cidoc-crm.org/cidoc-crm/P7_took_place_at> "This property describes the spatial location of an instance of E4 Period.
+The related instance of E53 Place should be seen as a wider approximation of the geometric area within which the phenomena that characterise the period in question occurred, see below. P7 took place at (witnessed) does not convey any meaning other than spatial positioning (frequently on the surface of the earth). For example, the period “Révolution française” can be said to have taken place in “France in 1789”; the “Victorian” period may be said to have taken place in “Britain from 1837-1901” and its colonies, as well as other parts of Europe and North America. An instance of E4 Period can take place at multiple non-contiguous, non-overlapping locations.
+This property is a shortcut of the more fully developed path from E4 Period through P161 has spatial projection, E53 Place, P89 falls within to E53 Place. E4 Period is a subclass of E92 Spacetime Volume. By the definition of P161 has spatial projection an instance of E4 Period takes place on all its spatial projections, that is, instances of E53 Place. Something happening at a given place can also be considered to happen at a larger place containing the first. For example, the assault on the Bastille 14-th July 1789 took place in the area covered by Paris in 1789 but also in the area covered by France in 1789."@en)
+AnnotationAssertion(rdfs:label <http://www.cidoc-crm.org/cidoc-crm/P7_took_place_at> "a eu lieu dans"@fr)
+AnnotationAssertion(rdfs:label <http://www.cidoc-crm.org/cidoc-crm/P7_took_place_at> "fand statt in"@de)
+AnnotationAssertion(rdfs:label <http://www.cidoc-crm.org/cidoc-crm/P7_took_place_at> "ocorreu em"@pt)
+AnnotationAssertion(rdfs:label <http://www.cidoc-crm.org/cidoc-crm/P7_took_place_at> "took place at"@en)
+AnnotationAssertion(rdfs:label <http://www.cidoc-crm.org/cidoc-crm/P7_took_place_at> "έλαβε χώρα σε"@el)
+AnnotationAssertion(rdfs:label <http://www.cidoc-crm.org/cidoc-crm/P7_took_place_at> "совершался на"@ru)
+AnnotationAssertion(rdfs:label <http://www.cidoc-crm.org/cidoc-crm/P7_took_place_at> "发生地在"@zh)
+SubObjectPropertyOf(<http://www.cidoc-crm.org/cidoc-crm/P7_took_place_at> <http://www.cidoc-crm.org/cidoc-crm/P161_has_spatial_projection>)
+InverseObjectProperties(<http://www.cidoc-crm.org/cidoc-crm/P7_took_place_at> <http://www.cidoc-crm.org/cidoc-crm/P7i_witnessed>)
+ObjectPropertyDomain(<http://www.cidoc-crm.org/cidoc-crm/P7_took_place_at> <http://www.cidoc-crm.org/cidoc-crm/E4_Period>)
+ObjectPropertyRange(<http://www.cidoc-crm.org/cidoc-crm/P7_took_place_at> <http://www.cidoc-crm.org/cidoc-crm/E53_Place>)
+
+# Object Property: <http://www.cidoc-crm.org/cidoc-crm/P9_consists_of> (<http://www.cidoc-crm.org/cidoc-crm/P9_consists_of>)
+
+InverseObjectProperties(<http://www.cidoc-crm.org/cidoc-crm/P9_consists_of> <http://www.cidoc-crm.org/cidoc-crm/P9i_forms_part_of>)
+
+# Object Property: <http://www.cidoc-crm.org/cidoc-crm/P9i_forms_part_of> (faz parte de)
+
+AnnotationAssertion(rdfs:label <http://www.cidoc-crm.org/cidoc-crm/P9i_forms_part_of> "bildet Teil von"@de)
+AnnotationAssertion(rdfs:label <http://www.cidoc-crm.org/cidoc-crm/P9i_forms_part_of> "fait partie de"@fr)
+AnnotationAssertion(rdfs:label <http://www.cidoc-crm.org/cidoc-crm/P9i_forms_part_of> "faz parte de"@pt)
+AnnotationAssertion(rdfs:label <http://www.cidoc-crm.org/cidoc-crm/P9i_forms_part_of> "forms part of"@en)
+AnnotationAssertion(rdfs:label <http://www.cidoc-crm.org/cidoc-crm/P9i_forms_part_of> "αποτελεί μέρος του/της"@el)
+AnnotationAssertion(rdfs:label <http://www.cidoc-crm.org/cidoc-crm/P9i_forms_part_of> "формирует часть"@ru)
+AnnotationAssertion(rdfs:label <http://www.cidoc-crm.org/cidoc-crm/P9i_forms_part_of> "组成部分"@zh)
+SubObjectPropertyOf(<http://www.cidoc-crm.org/cidoc-crm/P9i_forms_part_of> <http://www.cidoc-crm.org/cidoc-crm/P10_falls_within>)
+ObjectPropertyDomain(<http://www.cidoc-crm.org/cidoc-crm/P9i_forms_part_of> <http://www.cidoc-crm.org/cidoc-crm/E4_Period>)
+ObjectPropertyRange(<http://www.cidoc-crm.org/cidoc-crm/P9i_forms_part_of> <http://www.cidoc-crm.org/cidoc-crm/E4_Period>)
+
+# Object Property: <http://www.semanticweb.org/camino-santiago#ends_at> (<http://www.semanticweb.org/camino-santiago#ends_at>)
+
+SubObjectPropertyOf(<http://www.semanticweb.org/camino-santiago#ends_at> owl:topObjectProperty)
+ObjectPropertyDomain(<http://www.semanticweb.org/camino-santiago#ends_at> <http://www.semanticweb.org/camino-santiago#Trip>)
+ObjectPropertyRange(<http://www.semanticweb.org/camino-santiago#ends_at> <http://www.semanticweb.org/camino-santiago#Location>)
+
+# Object Property: <http://www.semanticweb.org/camino-santiago#has_stamp> (<http://www.semanticweb.org/camino-santiago#has_stamp>)
+
+ObjectPropertyDomain(<http://www.semanticweb.org/camino-santiago#has_stamp> <http://www.semanticweb.org/camino-santiago#Credencial>)
+ObjectPropertyRange(<http://www.semanticweb.org/camino-santiago#has_stamp> <http://www.semanticweb.org/camino-santiago#Stamp>)
+
+# Object Property: <http://www.semanticweb.org/camino-santiago#is_located_at> (<http://www.semanticweb.org/camino-santiago#is_located_at>)
+
+ObjectPropertyDomain(<http://www.semanticweb.org/camino-santiago#is_located_at> <http://www.cidoc-crm.org/cidoc-crm/E18_Physical_Thing>)
+ObjectPropertyRange(<http://www.semanticweb.org/camino-santiago#is_located_at> <http://www.semanticweb.org/camino-santiago#Location>)
+
+# Object Property: <http://www.semanticweb.org/camino-santiago#is_part_of> (<http://www.semanticweb.org/camino-santiago#is_part_of>)
+
+AnnotationAssertion(rdfs:comment <http://www.semanticweb.org/camino-santiago#is_part_of> "Connnects a Location with the Route it is part of"@en)
+SubObjectPropertyOf(<http://www.semanticweb.org/camino-santiago#is_part_of> owl:topObjectProperty)
+ObjectPropertyDomain(<http://www.semanticweb.org/camino-santiago#is_part_of> <http://www.semanticweb.org/camino-santiago#Location>)
+ObjectPropertyRange(<http://www.semanticweb.org/camino-santiago#is_part_of> <http://www.semanticweb.org/camino-santiago#Route>)
+
+# Object Property: <http://www.semanticweb.org/camino-santiago#is_related_to> (<http://www.semanticweb.org/camino-santiago#is_related_to>)
+
+ObjectPropertyDomain(<http://www.semanticweb.org/camino-santiago#is_related_to> <http://www.semanticweb.org/camino-santiago#Stamp>)
+ObjectPropertyRange(<http://www.semanticweb.org/camino-santiago#is_related_to> <http://www.semanticweb.org/camino-santiago#Accommodation>)
+
+# Object Property: <http://www.semanticweb.org/camino-santiago#starts_at> (<http://www.semanticweb.org/camino-santiago#starts_at>)
+
+ObjectPropertyDomain(<http://www.semanticweb.org/camino-santiago#starts_at> <http://www.semanticweb.org/camino-santiago#Trip>)
+ObjectPropertyRange(<http://www.semanticweb.org/camino-santiago#starts_at> <http://www.semanticweb.org/camino-santiago#Location>)
+
+# Object Property: <http://www.semanticweb.org/camino-santiago#visited> (<http://www.semanticweb.org/camino-santiago#visited>)
+
+SubObjectPropertyOf(<http://www.semanticweb.org/camino-santiago#visited> owl:topObjectProperty)
+ObjectPropertyDomain(<http://www.semanticweb.org/camino-santiago#visited> <http://www.cidoc-crm.org/cidoc-crm/E21_Person>)
+ObjectPropertyRange(<http://www.semanticweb.org/camino-santiago#visited> <http://www.semanticweb.org/camino-santiago#Monument>)
+
+
+
+############################
+#   Classes
+############################
+
+# Class: <http://www.cidoc-crm.org/cidoc-crm/E18_Physical_Thing> (实物)
+
+AnnotationAssertion(rdfs:comment <http://www.cidoc-crm.org/cidoc-crm/E18_Physical_Thing> "This class comprises all persistent physical items with a relatively stable form, human-made or natural.
+Depending on the existence of natural boundaries of such things, the CIDOC CRM distinguishes the instances of E19 Physical Object from instances of E26 Physical Feature, such as holes, rivers, pieces of land etc. Most instances of E19 Physical Object can be moved (if not too heavy), whereas features are integral to the surrounding matter.
+An instance of E18 Physical Thing occupies not only a particular geometric space at any instant of its existence, but in the course of its existence it also forms a trajectory through spacetime, which occupies a real, that is phenomenal, volume in spacetime. We include in the occupied space the space filled by the matter of the physical thing and all its inner spaces, such as the interior of a box. For the purpose of more detailed descriptions of the presence of an instance of E18 Physical Thing in space and time it can be associated with its specific instance of E92 Spacetime Volume by the property P196 defines (is defined by).
+The CIDOC CRM is generally not concerned with amounts of matter in fluid or gaseous states, as long as they are not confined in an identifiable way for an identifiable minimal time-span."@en)
+AnnotationAssertion(rdfs:label <http://www.cidoc-crm.org/cidoc-crm/E18_Physical_Thing> "Chose matérielle"@fr)
+AnnotationAssertion(rdfs:label <http://www.cidoc-crm.org/cidoc-crm/E18_Physical_Thing> "Coisa Material"@pt)
+AnnotationAssertion(rdfs:label <http://www.cidoc-crm.org/cidoc-crm/E18_Physical_Thing> "Materielles"@de)
+AnnotationAssertion(rdfs:label <http://www.cidoc-crm.org/cidoc-crm/E18_Physical_Thing> "Physical Thing"@en)
+AnnotationAssertion(rdfs:label <http://www.cidoc-crm.org/cidoc-crm/E18_Physical_Thing> "Υλικό Πράγμα"@el)
+AnnotationAssertion(rdfs:label <http://www.cidoc-crm.org/cidoc-crm/E18_Physical_Thing> "Физическая Вещь"@ru)
+AnnotationAssertion(rdfs:label <http://www.cidoc-crm.org/cidoc-crm/E18_Physical_Thing> "实物"@zh)
+SubClassOf(<http://www.cidoc-crm.org/cidoc-crm/E18_Physical_Thing> <http://www.cidoc-crm.org/cidoc-crm/E72_Legal_Object>)
+
+# Class: <http://www.cidoc-crm.org/cidoc-crm/E21_Person> (Person)
+
+AnnotationAssertion(rdfs:comment <http://www.cidoc-crm.org/cidoc-crm/E21_Person> "This class comprises real persons who live or are assumed to have lived.
+Legendary figures that may have existed, such as Ulysses and King Arthur, fall into this class if the documentation refers to them as historical figures. In cases where doubt exists as to whether several persons are in fact identical, multiple instances can be created and linked to indicate their relationship. The CIDOC CRM does not propose a specific form to support reasoning about possible identity.
+In a bibliographic context, a name presented following the conventions usually employed for personal names will be assumed to correspond to an actual real person (an instance of E21 Person), unless evidence is available to indicate that this is not the case. The fact that a persona may erroneously be classified as an instance of E21 Person does not imply that the concept comprises personae."@en)
+AnnotationAssertion(rdfs:label <http://www.cidoc-crm.org/cidoc-crm/E21_Person> "Person"@de)
+AnnotationAssertion(rdfs:label <http://www.cidoc-crm.org/cidoc-crm/E21_Person> "Person"@en)
+AnnotationAssertion(rdfs:label <http://www.cidoc-crm.org/cidoc-crm/E21_Person> "Personne"@fr)
+AnnotationAssertion(rdfs:label <http://www.cidoc-crm.org/cidoc-crm/E21_Person> "Pessoa"@pt)
+AnnotationAssertion(rdfs:label <http://www.cidoc-crm.org/cidoc-crm/E21_Person> "Πρόσωπο"@el)
+AnnotationAssertion(rdfs:label <http://www.cidoc-crm.org/cidoc-crm/E21_Person> "Личность"@ru)
+AnnotationAssertion(rdfs:label <http://www.cidoc-crm.org/cidoc-crm/E21_Person> "人物"@zh)
+SubClassOf(<http://www.cidoc-crm.org/cidoc-crm/E21_Person> <http://www.cidoc-crm.org/cidoc-crm/E20_Biological_Object>)
+SubClassOf(<http://www.cidoc-crm.org/cidoc-crm/E21_Person> <http://www.cidoc-crm.org/cidoc-crm/E39_Actor>)
+
+# Class: <http://www.cidoc-crm.org/cidoc-crm/E22_Human-Made_Object> (Human-Made Object)
+
+AnnotationAssertion(rdfs:comment <http://www.cidoc-crm.org/cidoc-crm/E22_Human-Made_Object> "This class comprises all persistent physical objects of any size that are purposely created by human activity and have physical boundaries that separate them completely in an objective way from other objects.
+The class also includes all aggregates of objects made for functional purposes of whatever kind, independent of physical coherence, such as a set of chessmen."@en)
+AnnotationAssertion(rdfs:label <http://www.cidoc-crm.org/cidoc-crm/E22_Human-Made_Object> "Human-Made Object"@en)
+SubClassOf(<http://www.cidoc-crm.org/cidoc-crm/E22_Human-Made_Object> <http://www.cidoc-crm.org/cidoc-crm/E19_Physical_Object>)
+SubClassOf(<http://www.cidoc-crm.org/cidoc-crm/E22_Human-Made_Object> <http://www.cidoc-crm.org/cidoc-crm/E24_Physical_Human-Made_Thing>)
+
+# Class: <http://www.cidoc-crm.org/cidoc-crm/E24_Physical_Human-Made_Thing> (<http://www.cidoc-crm.org/cidoc-crm/E24_Physical_Human-Made_Thing>)
+
+SubClassOf(<http://www.cidoc-crm.org/cidoc-crm/E24_Physical_Human-Made_Thing> <http://www.cidoc-crm.org/cidoc-crm/E18_Physical_Thing>)
+
+# Class: <http://www.cidoc-crm.org/cidoc-crm/E26_Physical_Feature> (<http://www.cidoc-crm.org/cidoc-crm/E26_Physical_Feature>)
+
+SubClassOf(<http://www.cidoc-crm.org/cidoc-crm/E26_Physical_Feature> <http://www.cidoc-crm.org/cidoc-crm/E18_Physical_Thing>)
+
+# Class: <http://www.cidoc-crm.org/cidoc-crm/E27_Site> (Site)
+
+AnnotationAssertion(rdfs:comment <http://www.cidoc-crm.org/cidoc-crm/E27_Site> "This class comprises pieces of land or sea floor.
+In contrast to the purely geometric notion of E53 Place, this class describes constellations of matter on the surface of the Earth or other celestial body, which can be represented by photographs, paintings and maps.
+Instances of E27 Site are composed of relatively immobile material items and features in a particular configuration at a particular location."@en)
+AnnotationAssertion(rdfs:label <http://www.cidoc-crm.org/cidoc-crm/E27_Site> "Gelände"@de)
+AnnotationAssertion(rdfs:label <http://www.cidoc-crm.org/cidoc-crm/E27_Site> "Lugar"@pt)
+AnnotationAssertion(rdfs:label <http://www.cidoc-crm.org/cidoc-crm/E27_Site> "Site"@en)
+AnnotationAssertion(rdfs:label <http://www.cidoc-crm.org/cidoc-crm/E27_Site> "Site"@fr)
+AnnotationAssertion(rdfs:label <http://www.cidoc-crm.org/cidoc-crm/E27_Site> "Φυσικός Χώρος"@el)
+AnnotationAssertion(rdfs:label <http://www.cidoc-crm.org/cidoc-crm/E27_Site> "Участок"@ru)
+AnnotationAssertion(rdfs:label <http://www.cidoc-crm.org/cidoc-crm/E27_Site> "场地"@zh)
+SubClassOf(<http://www.cidoc-crm.org/cidoc-crm/E27_Site> <http://www.cidoc-crm.org/cidoc-crm/E26_Physical_Feature>)
+
+# Class: <http://www.cidoc-crm.org/cidoc-crm/E31_Document> (Documento)
+
+AnnotationAssertion(rdfs:comment <http://www.cidoc-crm.org/cidoc-crm/E31_Document> "This class comprises identifiable immaterial items that make propositions about reality.
+These propositions may be expressed in text, graphics, images, audiograms, videograms or by other similar means. Documentation databases are regarded as instances of E31 Document. This class should not be confused with the concept “document” in Information Technology, which is compatible with E73 Information Object."@en)
+AnnotationAssertion(rdfs:label <http://www.cidoc-crm.org/cidoc-crm/E31_Document> "Document"@en)
+AnnotationAssertion(rdfs:label <http://www.cidoc-crm.org/cidoc-crm/E31_Document> "Document"@fr)
+AnnotationAssertion(rdfs:label <http://www.cidoc-crm.org/cidoc-crm/E31_Document> "Documento"@pt)
+AnnotationAssertion(rdfs:label <http://www.cidoc-crm.org/cidoc-crm/E31_Document> "Dokument"@de)
+AnnotationAssertion(rdfs:label <http://www.cidoc-crm.org/cidoc-crm/E31_Document> "Τεκμήριο"@el)
+AnnotationAssertion(rdfs:label <http://www.cidoc-crm.org/cidoc-crm/E31_Document> "Документ"@ru)
+AnnotationAssertion(rdfs:label <http://www.cidoc-crm.org/cidoc-crm/E31_Document> "文献"@zh)
+SubClassOf(<http://www.cidoc-crm.org/cidoc-crm/E31_Document> <http://www.cidoc-crm.org/cidoc-crm/E73_Information_Object>)
+
+# Class: <http://www.cidoc-crm.org/cidoc-crm/E52_Time-Span> (Durée)
+
+AnnotationAssertion(rdfs:comment <http://www.cidoc-crm.org/cidoc-crm/E52_Time-Span> "This class comprises abstract temporal extents, in the sense of Galilean physics, having a beginning, an end and a duration.
+Instances of E52 Time-Span have no semantic connotations about phenomena happening within the temporal extent they represent. They do not convey any meaning other than a positioning on the “time-line” of chronology. The actual extent of an instance of E52 Time-Span can be approximated by properties of E52 Time-Span giving inner and outer bounds in the form of dates (instances of E61 Time Primitive). Comparing knowledge about time-spans is fundamental for chronological reasoning.
+Some instances of E52 Time-Span may be defined as the actual, in principle observable, temporal extent of instances of E2 Temporal Entity via the property P4 has time-span (is time-span of): E52 Time-Span. They constitute phenomenal time-spans as defined in CRMgeo (Doerr &amp; Hiebel 2013). Since our knowledge of history is imperfect and physical phenomena are fuzzy in nature, the extent of phenomenal time-spans can only be described in approximation. An extreme case of approximation, might, for example, define an instance of E52 Time-Span having unknown beginning, end and duration. It may, nevertheless, be associated with other descriptions by which we can infer knowledge about it, such as in relative chronologies.
+Some instances of E52 may be defined precisely as representing a declaration of a temporal extent, as, for instance, done in a business contract. They constitute declarative time-spans as defined in CRMgeo (Doerr &amp; Hiebel 2013) and can be described via the property E61 Time Primitive P170 defines time (time is defined by): E52 Time-Span.
+When used as a common E52 Time-Span for two events, it will nevertheless describe them as being simultaneous, even if nothing else is known."@en)
+AnnotationAssertion(rdfs:label <http://www.cidoc-crm.org/cidoc-crm/E52_Time-Span> "Durée"@fr)
+AnnotationAssertion(rdfs:label <http://www.cidoc-crm.org/cidoc-crm/E52_Time-Span> "Período de Tempo"@pt)
+AnnotationAssertion(rdfs:label <http://www.cidoc-crm.org/cidoc-crm/E52_Time-Span> "Time-Span"@en)
+AnnotationAssertion(rdfs:label <http://www.cidoc-crm.org/cidoc-crm/E52_Time-Span> "Zeitspanne"@de)
+AnnotationAssertion(rdfs:label <http://www.cidoc-crm.org/cidoc-crm/E52_Time-Span> "Χρονικό Διάστημα"@el)
+AnnotationAssertion(rdfs:label <http://www.cidoc-crm.org/cidoc-crm/E52_Time-Span> "Интервал Времени"@ru)
+AnnotationAssertion(rdfs:label <http://www.cidoc-crm.org/cidoc-crm/E52_Time-Span> "时段"@zh)
+SubClassOf(<http://www.cidoc-crm.org/cidoc-crm/E52_Time-Span> <http://www.cidoc-crm.org/cidoc-crm/E1_CRM_Entity>)
+
+# Class: <http://www.cidoc-crm.org/cidoc-crm/E53_Place> (Место)
+
+AnnotationAssertion(rdfs:comment <http://www.cidoc-crm.org/cidoc-crm/E53_Place> "This class comprises extents in the natural space we live in, in particular on the surface of the Earth, in the pure sense of physics: independent from temporal phenomena and matter. They may serve describing the physical location of things or phenomena or other areas of interest. Geometrically, instances of E53 Place constitute single contiguous areas or a finite aggregation of disjoint areas in space which are each individually contiguous. They may have fuzzy boundaries.
+The instances of E53 Place are usually determined by reference to the position of “immobile” objects such as buildings, cities, mountains, rivers, or dedicated geodetic marks, but may also be determined by reference to mobile objects. A Place can be determined by combining a frame of reference and a location with respect to this frame.
+It is sometimes argued that instances of E53 Place are best identified by global coordinates or absolute reference systems. However, relative references are often more relevant in the context of cultural documentation and tend to be more precise. In particular, we are often interested in position in relation to large, mobile objects, such as ships. For example, the Place at which Nelson died is known with reference to a large mobile object – H.M.S Victory. A resolution of this Place in terms of absolute coordinates would require knowledge of the movements of the vessel and the precise time of death, either of which may be revised, and the result would lack historical and cultural relevance.
+Any instance of E18 Physical Thing can serve as a frame of reference for an instance of E53 Place. This may be documented using the property P157 is at rest relative to (provides reference space for)."@en)
+AnnotationAssertion(rdfs:label <http://www.cidoc-crm.org/cidoc-crm/E53_Place> "Lieu"@fr)
+AnnotationAssertion(rdfs:label <http://www.cidoc-crm.org/cidoc-crm/E53_Place> "Local"@pt)
+AnnotationAssertion(rdfs:label <http://www.cidoc-crm.org/cidoc-crm/E53_Place> "Ort"@de)
+AnnotationAssertion(rdfs:label <http://www.cidoc-crm.org/cidoc-crm/E53_Place> "Place"@en)
+AnnotationAssertion(rdfs:label <http://www.cidoc-crm.org/cidoc-crm/E53_Place> "Τόπος"@el)
+AnnotationAssertion(rdfs:label <http://www.cidoc-crm.org/cidoc-crm/E53_Place> "Место"@ru)
+AnnotationAssertion(rdfs:label <http://www.cidoc-crm.org/cidoc-crm/E53_Place> "地点"@zh)
+SubClassOf(<http://www.cidoc-crm.org/cidoc-crm/E53_Place> <http://www.cidoc-crm.org/cidoc-crm/E1_CRM_Entity>)
+
+# Class: <http://www.cidoc-crm.org/cidoc-crm/E7_Activity> (Handlung)
+
+AnnotationAssertion(rdfs:comment <http://www.cidoc-crm.org/cidoc-crm/E7_Activity> "This class comprises actions intentionally carried out by instances of E39 Actor that result in changes of state in the cultural, social, or physical systems documented.
+This notion includes complex, composite and long-lasting actions such as the building of a settlement or a war, as well as simple, short-lived actions such as the opening of a door."@en)
+AnnotationAssertion(rdfs:label <http://www.cidoc-crm.org/cidoc-crm/E7_Activity> "Activity"@en)
+AnnotationAssertion(rdfs:label <http://www.cidoc-crm.org/cidoc-crm/E7_Activity> "Activité"@fr)
+AnnotationAssertion(rdfs:label <http://www.cidoc-crm.org/cidoc-crm/E7_Activity> "Atividade"@pt)
+AnnotationAssertion(rdfs:label <http://www.cidoc-crm.org/cidoc-crm/E7_Activity> "Handlung"@de)
+AnnotationAssertion(rdfs:label <http://www.cidoc-crm.org/cidoc-crm/E7_Activity> "Δράση"@el)
+AnnotationAssertion(rdfs:label <http://www.cidoc-crm.org/cidoc-crm/E7_Activity> "Деятельность"@ru)
+AnnotationAssertion(rdfs:label <http://www.cidoc-crm.org/cidoc-crm/E7_Activity> "活动"@zh)
+SubClassOf(<http://www.cidoc-crm.org/cidoc-crm/E7_Activity> <http://www.cidoc-crm.org/cidoc-crm/E5_Event>)
+
+# Class: <http://www.semanticweb.org/camino-santiago#Accommodation> (<http://www.semanticweb.org/camino-santiago#Accommodation>)
+
+SubClassOf(<http://www.semanticweb.org/camino-santiago#Accommodation> <http://www.cidoc-crm.org/cidoc-crm/E27_Site>)
+
+# Class: <http://www.semanticweb.org/camino-santiago#Compostela> (<http://www.semanticweb.org/camino-santiago#Compostela>)
+
+SubClassOf(<http://www.semanticweb.org/camino-santiago#Compostela> <http://www.cidoc-crm.org/cidoc-crm/E31_Document>)
+
+# Class: <http://www.semanticweb.org/camino-santiago#Credencial> (<http://www.semanticweb.org/camino-santiago#Credencial>)
+
+SubClassOf(<http://www.semanticweb.org/camino-santiago#Credencial> <http://www.cidoc-crm.org/cidoc-crm/E31_Document>)
+
+# Class: <http://www.semanticweb.org/camino-santiago#Location> (<http://www.semanticweb.org/camino-santiago#Location>)
+
+SubClassOf(<http://www.semanticweb.org/camino-santiago#Location> <http://www.cidoc-crm.org/cidoc-crm/E53_Place>)
+
+# Class: <http://www.semanticweb.org/camino-santiago#Monument> (<http://www.semanticweb.org/camino-santiago#Monument>)
+
+SubClassOf(<http://www.semanticweb.org/camino-santiago#Monument> <http://www.cidoc-crm.org/cidoc-crm/E22_Human-Made_Object>)
+
+# Class: <http://www.semanticweb.org/camino-santiago#Passing> (<http://www.semanticweb.org/camino-santiago#Passing>)
+
+SubClassOf(<http://www.semanticweb.org/camino-santiago#Passing> <http://www.cidoc-crm.org/cidoc-crm/E7_Activity>)
+
+# Class: <http://www.semanticweb.org/camino-santiago#Piligrim> (<http://www.semanticweb.org/camino-santiago#Piligrim>)
+
+SubClassOf(<http://www.semanticweb.org/camino-santiago#Piligrim> <http://www.cidoc-crm.org/cidoc-crm/E21_Person>)
+
+# Class: <http://www.semanticweb.org/camino-santiago#Tourist> (<http://www.semanticweb.org/camino-santiago#Tourist>)
+
+SubClassOf(<http://www.semanticweb.org/camino-santiago#Tourist> <http://www.cidoc-crm.org/cidoc-crm/E21_Person>)
+
+# Class: <http://www.semanticweb.org/camino-santiago#Trip> (<http://www.semanticweb.org/camino-santiago#Trip>)
+
+SubClassOf(<http://www.semanticweb.org/camino-santiago#Trip> <http://www.cidoc-crm.org/cidoc-crm/E7_Activity>)
+
+
+)
