@@ -30,6 +30,7 @@ Declaration(Class(<http://www.cidoc-crm.org/cidoc-crm/E7_Activity>))
 Declaration(Class(<http://www.semanticweb.org/camino-santiago#Accommodation>))
 Declaration(Class(<http://www.semanticweb.org/camino-santiago#Compostela>))
 Declaration(Class(<http://www.semanticweb.org/camino-santiago#Credencial>))
+Declaration(Class(<http://www.semanticweb.org/camino-santiago#FinalPassing>))
 Declaration(Class(<http://www.semanticweb.org/camino-santiago#Location>))
 Declaration(Class(<http://www.semanticweb.org/camino-santiago#Monument>))
 Declaration(Class(<http://www.semanticweb.org/camino-santiago#Passing>))
@@ -56,12 +57,12 @@ Declaration(ObjectProperty(<http://www.cidoc-crm.org/cidoc-crm/P7_took_place_at>
 Declaration(ObjectProperty(<http://www.cidoc-crm.org/cidoc-crm/P7i_witnessed>))
 Declaration(ObjectProperty(<http://www.cidoc-crm.org/cidoc-crm/P9_consists_of>))
 Declaration(ObjectProperty(<http://www.cidoc-crm.org/cidoc-crm/P9i_forms_part_of>))
-Declaration(ObjectProperty(<http://www.semanticweb.org/camino-santiago#ends_at>))
+Declaration(ObjectProperty(<http://www.semanticweb.org/camino-santiago#hasMultiplePassing>))
+Declaration(ObjectProperty(<http://www.semanticweb.org/camino-santiago#hasNextPassing>))
 Declaration(ObjectProperty(<http://www.semanticweb.org/camino-santiago#has_stamp>))
 Declaration(ObjectProperty(<http://www.semanticweb.org/camino-santiago#is_located_at>))
 Declaration(ObjectProperty(<http://www.semanticweb.org/camino-santiago#is_part_of>))
 Declaration(ObjectProperty(<http://www.semanticweb.org/camino-santiago#is_related_to>))
-Declaration(ObjectProperty(<http://www.semanticweb.org/camino-santiago#starts_at>))
 Declaration(ObjectProperty(<http://www.semanticweb.org/camino-santiago#visited>))
 
 ############################
@@ -155,7 +156,7 @@ ObjectPropertyRange(<http://www.cidoc-crm.org/cidoc-crm/P7_took_place_at> <http:
 
 InverseObjectProperties(<http://www.cidoc-crm.org/cidoc-crm/P9_consists_of> <http://www.cidoc-crm.org/cidoc-crm/P9i_forms_part_of>)
 
-# Object Property: <http://www.cidoc-crm.org/cidoc-crm/P9i_forms_part_of> (faz parte de)
+# Object Property: <http://www.cidoc-crm.org/cidoc-crm/P9i_forms_part_of> (fait partie de)
 
 AnnotationAssertion(rdfs:label <http://www.cidoc-crm.org/cidoc-crm/P9i_forms_part_of> "bildet Teil von"@de)
 AnnotationAssertion(rdfs:label <http://www.cidoc-crm.org/cidoc-crm/P9i_forms_part_of> "fait partie de"@fr)
@@ -168,11 +169,16 @@ SubObjectPropertyOf(<http://www.cidoc-crm.org/cidoc-crm/P9i_forms_part_of> <http
 ObjectPropertyDomain(<http://www.cidoc-crm.org/cidoc-crm/P9i_forms_part_of> <http://www.cidoc-crm.org/cidoc-crm/E4_Period>)
 ObjectPropertyRange(<http://www.cidoc-crm.org/cidoc-crm/P9i_forms_part_of> <http://www.cidoc-crm.org/cidoc-crm/E4_Period>)
 
-# Object Property: <http://www.semanticweb.org/camino-santiago#ends_at> (<http://www.semanticweb.org/camino-santiago#ends_at>)
+# Object Property: <http://www.semanticweb.org/camino-santiago#hasMultiplePassing> (<http://www.semanticweb.org/camino-santiago#hasMultiplePassing>)
 
-SubObjectPropertyOf(<http://www.semanticweb.org/camino-santiago#ends_at> owl:topObjectProperty)
-ObjectPropertyDomain(<http://www.semanticweb.org/camino-santiago#ends_at> <http://www.semanticweb.org/camino-santiago#Trip>)
-ObjectPropertyRange(<http://www.semanticweb.org/camino-santiago#ends_at> <http://www.semanticweb.org/camino-santiago#Location>)
+ObjectPropertyDomain(<http://www.semanticweb.org/camino-santiago#hasMultiplePassing> <http://www.semanticweb.org/camino-santiago#Trip>)
+ObjectPropertyRange(<http://www.semanticweb.org/camino-santiago#hasMultiplePassing> <http://www.semanticweb.org/camino-santiago#Passing>)
+
+# Object Property: <http://www.semanticweb.org/camino-santiago#hasNextPassing> (<http://www.semanticweb.org/camino-santiago#hasNextPassing>)
+
+SubObjectPropertyOf(<http://www.semanticweb.org/camino-santiago#hasNextPassing> owl:topObjectProperty)
+ObjectPropertyDomain(<http://www.semanticweb.org/camino-santiago#hasNextPassing> <http://www.semanticweb.org/camino-santiago#Passing>)
+ObjectPropertyRange(<http://www.semanticweb.org/camino-santiago#hasNextPassing> <http://www.semanticweb.org/camino-santiago#Passing>)
 
 # Object Property: <http://www.semanticweb.org/camino-santiago#has_stamp> (<http://www.semanticweb.org/camino-santiago#has_stamp>)
 
@@ -195,11 +201,6 @@ ObjectPropertyRange(<http://www.semanticweb.org/camino-santiago#is_part_of> <htt
 
 ObjectPropertyDomain(<http://www.semanticweb.org/camino-santiago#is_related_to> <http://www.semanticweb.org/camino-santiago#Stamp>)
 ObjectPropertyRange(<http://www.semanticweb.org/camino-santiago#is_related_to> <http://www.semanticweb.org/camino-santiago#Accommodation>)
-
-# Object Property: <http://www.semanticweb.org/camino-santiago#starts_at> (<http://www.semanticweb.org/camino-santiago#starts_at>)
-
-ObjectPropertyDomain(<http://www.semanticweb.org/camino-santiago#starts_at> <http://www.semanticweb.org/camino-santiago#Trip>)
-ObjectPropertyRange(<http://www.semanticweb.org/camino-santiago#starts_at> <http://www.semanticweb.org/camino-santiago#Location>)
 
 # Object Property: <http://www.semanticweb.org/camino-santiago#visited> (<http://www.semanticweb.org/camino-santiago#visited>)
 
@@ -259,7 +260,7 @@ SubClassOf(<http://www.cidoc-crm.org/cidoc-crm/E24_Physical_Human-Made_Thing> <h
 
 SubClassOf(<http://www.cidoc-crm.org/cidoc-crm/E26_Physical_Feature> <http://www.cidoc-crm.org/cidoc-crm/E18_Physical_Thing>)
 
-# Class: <http://www.cidoc-crm.org/cidoc-crm/E27_Site> (Site)
+# Class: <http://www.cidoc-crm.org/cidoc-crm/E27_Site> (Участок)
 
 AnnotationAssertion(rdfs:comment <http://www.cidoc-crm.org/cidoc-crm/E27_Site> "This class comprises pieces of land or sea floor.
 In contrast to the purely geometric notion of E53 Place, this class describes constellations of matter on the surface of the Earth or other celestial body, which can be represented by photographs, paintings and maps.
@@ -342,6 +343,10 @@ SubClassOf(<http://www.semanticweb.org/camino-santiago#Compostela> <http://www.c
 
 SubClassOf(<http://www.semanticweb.org/camino-santiago#Credencial> <http://www.cidoc-crm.org/cidoc-crm/E31_Document>)
 
+# Class: <http://www.semanticweb.org/camino-santiago#FinalPassing> (<http://www.semanticweb.org/camino-santiago#FinalPassing>)
+
+SubClassOf(<http://www.semanticweb.org/camino-santiago#FinalPassing> <http://www.semanticweb.org/camino-santiago#Passing>)
+
 # Class: <http://www.semanticweb.org/camino-santiago#Location> (<http://www.semanticweb.org/camino-santiago#Location>)
 
 SubClassOf(<http://www.semanticweb.org/camino-santiago#Location> <http://www.cidoc-crm.org/cidoc-crm/E53_Place>)
@@ -357,6 +362,10 @@ SubClassOf(<http://www.semanticweb.org/camino-santiago#Passing> <http://www.cido
 # Class: <http://www.semanticweb.org/camino-santiago#Piligrim> (<http://www.semanticweb.org/camino-santiago#Piligrim>)
 
 SubClassOf(<http://www.semanticweb.org/camino-santiago#Piligrim> <http://www.cidoc-crm.org/cidoc-crm/E21_Person>)
+
+# Class: <http://www.semanticweb.org/camino-santiago#Stamp> (<http://www.semanticweb.org/camino-santiago#Stamp>)
+
+SubClassOf(<http://www.semanticweb.org/camino-santiago#Stamp> <http://www.cidoc-crm.org/cidoc-crm/E22_Human-Made_Object>)
 
 # Class: <http://www.semanticweb.org/camino-santiago#Tourist> (<http://www.semanticweb.org/camino-santiago#Tourist>)
 
